@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   get "/" => "books#top"
   get "/books" => "books#index"
   
-  post 'books' => 'todolists#create'
+  post 'books' => 'books#create'
   
-  resources :blogs
+  resources :books
  end
