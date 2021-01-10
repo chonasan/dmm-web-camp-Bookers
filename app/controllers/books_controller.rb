@@ -1,6 +1,6 @@
 class BooksController < ApplicationController
+  
   def index
-    
   end
 
   def show
@@ -10,7 +10,9 @@ class BooksController < ApplicationController
   end
 
   def new
-    
+  end
+  
+  def edit
   end
 
   def create
@@ -22,9 +24,6 @@ class BooksController < ApplicationController
       end
   end
 
-  def edit
-
-  end
 
   def update
     book = Book.find(params[:id])
