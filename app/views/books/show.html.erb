@@ -6,14 +6,14 @@
 
 <%= form_with model:@book, local:true do |f| %>
 
-  <p id="notice">Book was successfully created.</p>
+  <p id ="notice">Book was successfully created.</p>
 
-  <h4>Title:</h4><%= :title %>
+  <h4>Title:</h4><%= @book.title %>
 
-  <h4>Body:</h4><%= :body %>
+  <h4>Body:</h4><%= @book.body %>
 
 <% end %>
 
-<a class="edit_id" href="/books/id/edit">Edit</a>
+<a class="edit_<%= @book.id %>" href="/books/<%= @book.id %>/edit">Edit</a>
 "|"
 <a class="back" href="/books">Back</a>

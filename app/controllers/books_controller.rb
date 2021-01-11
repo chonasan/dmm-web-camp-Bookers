@@ -1,7 +1,9 @@
 class BooksController < ApplicationController
   
   def top
-    
+  end
+  
+  def books
   end
   
   def index
@@ -10,21 +12,18 @@ class BooksController < ApplicationController
   end
 
   def show
+    @book = Book.find(params[:id])
   end
 
-  def books
-  end
-
-  def new
-  end
   
   def edit
+    @book = Book.find(params[:id])
   end
 
   def create
     @book = Book.new(params[:id])
       if @book.save
-        redirect_to action: :show
+        redirect_to book_path(book.id)
       end
   end
 

@@ -8,15 +8,15 @@
 
 <%= form_with model:@book, local: true do |f| %>
   <h4>Title</h4>
-  <%= f.text_field :title %>
+  <%= f.text_field @book.title %>
   <h4>Body</h4>
-  <%= f.text_area :body %>
+  <%= f.text_area @book.body %>
   <p>
   <%= f.submit 'Update Book' %>
   </p>
 <% end %>
 
-<a class="show_<%= :id %>" href="/books/<%= :id %>">Show</a>
+<a class="show_<%= @book.id %>" href="/books/<%= @book.id %>">Show</a>
 "|"
 <a class="back" href="/books">Back</a>
 
