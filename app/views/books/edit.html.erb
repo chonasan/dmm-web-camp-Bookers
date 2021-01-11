@@ -1,9 +1,11 @@
+<!-- 投稿編集画面-->
 
+<!-- 編集フォームページ -->
 
 
 
 <h1>Editing Book</h1>
-<!-- form_with部分 -->
+
 <%= form_with model:@book, local: true do |f| %>
   <h4>Title</h4>
   <%= f.text_field :title %>
@@ -14,7 +16,7 @@
   </p>
 <% end %>
 
-<a class="" href="">Show</a>
+<a class="show_<%= :id %>" href="/books/<%= :id %>">Show</a>
 "|"
 <a class="back" href="/books">Back</a>
 
